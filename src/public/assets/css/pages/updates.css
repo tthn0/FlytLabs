@@ -1,0 +1,428 @@
+main {
+    margin: 8em auto 0 auto;
+    max-width: 46em;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main section>form {
+    width: 100%;
+}
+
+main section>h1 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+main section>form span {
+    display: block;
+    width: 100%;
+    margin-top: .75em;
+}
+
+main section>form span:first-of-type {
+    margin-top: 2em;
+}
+
+main section>form input:not([type="submit"]),
+main section>form textarea {
+    border: none;
+    width: 100%;
+    border-radius: .75em;
+    box-sizing: border-box;
+    padding: .75em 1em;
+    font-size: .9em;
+    font-weight: 500;
+    background: rgb(246, 246, 246);
+    transition: .3s ease;
+}
+
+main section>form input:not([type="submit"]):focus,
+main section>form input:not([type="submit"]):hover,
+main section>form textarea:focus,
+main section>form textarea:hover {
+    outline: none;
+    background: rgb(240, 240, 240);
+    transition: .3s ease;
+}
+
+main section>form textarea {
+    height: 10em;
+    resize: vertical;
+    font-weight: 400;
+}
+
+main section>form input[type="submit"] {
+    margin-top: 2em;
+    padding: .75em 3em;
+    border-radius: 100em;
+    border: none;
+    color: white;
+    background: linear-gradient(to left, var(--leftGreen), var(--rightGreen));
+    transition: .3s ease;
+    font-size: .9em;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(52, 235, 206, .25);
+}
+
+main section>form input[type="submit"]:hover,
+main section>form input[type="submit"]:focus {
+    cursor: pointer;
+    filter: hue-rotate(10deg);
+    transition: .3s ease;
+}
+
+main section div p a {
+    color: var(--rightBlue);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+main section div p a:hover,
+main section div p a:focus {
+    filter: brightness(150%);
+    transition: .3s ease;
+}
+
+main div.card {
+    margin-top: 3em;
+    border-radius: .75em;
+    background: rgb(246, 246, 246);
+}
+
+main div.card>div {
+    padding: 2em;
+}
+
+main div.card div.top span {
+    display: block;
+}
+
+main div.card div.top span.title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+main div.card div.top span.date {
+    margin-top: 1em;
+    font-size: .8em;
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+}
+
+main div.card img {
+    width: 100%;
+    border-radius: .75em .75em 0 0;
+    filter: brightness(110%) hue-rotate(1deg);
+}
+
+main div.card p.body {
+    margin-top: 2em;
+    line-height: 1.75em;
+}
+
+main div.card a {
+    display: inline-block;
+    margin-top: 1em;
+    font-size: .8em;
+    font-weight: 600;
+    color: rgb(25, 151, 243);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+main div.card a:hover {
+    filter: brightness(150%);
+}
+
+main section div.card form {
+    position: relative;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+main section div.card form input {
+    font-size: .8em;
+    font-weight: 600;
+    color: rgb(25, 151, 243);
+    min-width: 4em;
+    max-width: 4em;
+    border: none;
+    transition: .3s ease;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+main section div.card form p.delete {
+    font-size: .8em;
+    font-weight: 600;
+    color: rgb(232, 0, 0) !important;
+    background: none;
+    border: none;
+    transition: .3s ease;
+}
+
+main section div.card form:hover p.delete {
+    filter: brightness(200%);
+    transition: .3s ease;
+}
+
+main section div.card form input:hover {
+    cursor: pointer;
+}
+
+main section div.card form i {
+    position: absolute;
+    right: 0;
+}
+
+/* @media only screen and (max-width: 1180px) {
+    
+} */
+
+/* @media only screen and (max-width: 1020px) {
+
+} */
+
+@media only screen and (max-width: 900px) {
+    main {
+        margin: 5em 3em 0 3em;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main section>h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        margin: 2em 5em 0 5em;
+        position: relative;
+    }
+
+    main section>h1 {
+        font-size: 1.6em;
+        margin-top: 1.4em;
+    }
+
+    main section>form input:not([type="submit"]),
+    main section>form textarea {
+        font-size: .8em;
+    }
+
+    main section>form input[type="submit"] {
+        font-size: .8em;
+    }
+
+    main div.card {
+        font-size: .9em;
+    }
+
+    main div.card p.body {
+        margin-top: 1.5em;
+    }
+
+    main section div.card form {
+        margin-top: 1.5em;
+    }
+
+    main section div.card form input[name="edit"] {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin: 2em 4em 0 4em;
+    }
+
+    main div.card {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main {
+        margin: 2em 2em 0 2em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+        margin: 1em 1.5em 0 1.5em;
+    }
+
+    main section>h1 {
+        font-size: 1.4em;
+    }
+
+    main section>form input:not([type="submit"]),
+    main section>form textarea {
+        font-size: .7em;
+    }
+
+    main section>form input[type="submit"] {
+        font-size: .7em;
+    }
+
+    main div.card {
+        font-size: .75em;
+    }
+
+    main div.card div.top span.title {
+        font-size: 1.25em;
+    }
+
+    main div.card div.top span.date {
+        font-size: .5em;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    main {
+        margin: 0 1em 0 1em;
+    }
+
+    main section>h1 {
+        font-size: 1.2em;
+    }
+
+    main div.card {
+        font-size: .6em;
+    }
+
+    main div.card div.top span.title {
+        font-size: 1.1em;
+    }
+
+    main div.card div.top span.date {
+        font-size: .45em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    main section>form input:not([type="submit"]),
+    main section>form textarea {
+        background: var(--dark);
+        color: aliceblue;
+    }
+
+    main section>form input:not([type="submit"]):focus,
+    main section>form input:not([type="submit"]):hover,
+    main section>form textarea:focus,
+    main section>form textarea:hover {
+        outline: none;
+        background: rgb(28, 40, 46);
+        transition: .3s ease;
+    }
+
+    main section>form input:not([type="submit"])::placeholder,
+    main section>form textarea::placeholder {
+        color: rgb(200, 200, 200);
+    }
+
+    main div.card {
+        background: var(--dark);
+    }
+
+    main div.card span.title {
+        color: aliceblue;
+    }
+
+    main section div.card form i {
+        color: aliceblue;
+    }
+
+}
+
+input[type="file"]+label:hover,
+input[type="file"]:focus+label {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    input[type="file"]+label {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    input[type="file"]+label {
+        font-size: .7em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    input[type="file"]+label {
+        background: var(--dark);
+        color: rgb(200, 200, 200);
+    }
+
+    input[type="file"]+label:hover,
+    input[type="file"]:focus+label {
+        background-color: rgb(28, 40, 46);
+    }
+}
+
+/* Admin Screen */
+
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+input[type="file"]+label {
+    margin-top: .75em;
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-radius: .5em;
+    padding: 1em 0;
+    font-size: .9em;
+    font-weight: 500;
+    background: rgb(246, 246, 246);
+    transition: .3s ease;
+}
+
+input[type="file"]+label:hover,
+input[type="file"]:focus+label {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    input[type="file"]+label {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    input[type="file"]+label {
+        font-size: .7em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    input[type="file"]+label {
+        background: var(--dark);
+        color: rgb(200, 200, 200);
+    }
+
+    input[type="file"]+label:hover,
+    input[type="file"]:focus+label {
+        background-color: rgb(28, 40, 46);
+    }
+}

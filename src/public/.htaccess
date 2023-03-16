@@ -1,0 +1,16 @@
+php_value post_max_size 15M
+php_value upload_max_filesize 15M
+
+# The snippet below utilizes mod_rewrite and sets up a common URL rewriting scheme where any requested URL that does not correspond to an existing file or directory on the server will be internally redirected to `index.php`. This allows your PHP file to act as a front controller, handling different URLs and providing the appropriate response.
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+# - `RewriteEngine On`: This directive enables the rewrite engine for the current `.htaccess` file. It allows Apache to process URL rewriting rules.
+# - `RewriteBase /`: Specifies the base URL path to which the following rewrite rules are applied. In this case, it sets the base to the root directory of the website.
+# - `RewriteCond %{REQUEST_FILENAME} !-f`: This condition checks if the requested URL does not match an existing file on the server. The `!-f` flag negates the condition, so it will be true if the file doesn't exist.
+# - `RewriteCond %{REQUEST_FILENAME} !-d`: This condition checks if the requested URL does not match an existing directory on the server. Similarly, the `!-d` flag negates the condition.
+# - `RewriteRule ^(.*)$ index.php [L]`: This rule captures the entire requested URL path and redirects it to `index.php`. The `[L]` flag indicates that this is the last rule to be processed if it matches. The captured URL path is passed as a query parameter to `index.php`, which allows your PHP file to handle the requested URL and display the appropriate content.

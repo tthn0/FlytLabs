@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets/
+
+Sitemap: http://164.152.23.94/sitemap/sitemap.xml
